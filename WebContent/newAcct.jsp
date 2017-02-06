@@ -24,12 +24,12 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./newAcct.html">NEW ACCOUNTS</a></li>
-        <li><a href="./openAcct.html">EXISTING ACCOUNTS (CHECKING/SAVINGS)</a></li>
+       <!--  <li><a href="./about.html">ABOUT</a></li> -->
+        <li>NEW ACCOUNTS</li>
+        <!-- <li><a href="./openAcct.html">EXISTING ACCOUNTS (CHECKING/SAVINGS)</a></li>
         <li><a href="./loans.html">LOANS</a></li>
         <li><a href="./creditCards.html">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.html">CONTACT</a></li>
+        <li><a href="./contactUs.html">CONTACT</a></li> -->
       </ul>
     </nav>
   </header>
@@ -68,26 +68,26 @@
 </form>
 </p>
     </article>
-    <aside class="right_article"><img src="../images/logo.jpg" alt="" width="1040" height="400" class="placeholder"/> </aside>
+    <p class="right_article"><img src="./images/logo.jpg" alt="" width="1040" height="400" class="placeholder"/> </p>
   </section>
   <div class="row">
     <div class="columns">
-      <p class="thumbnail_align"> <a href="openAcct.html"><img src="../images/17123251389_bed3c3a1ba_b.jpg" alt="" class="thumbnail"></a> </p>
+      <p class="thumbnail_align"> <a href="openAcct.html"><img src="./images/17123251389_bed3c3a1ba_b.jpg" alt="" class="thumbnail"></a> </p>
       <h4>SAVINGS</h4>
       <p>Every member is also an owner simply by opening a Regular Savings account with just a $1 minimum balance. </p>
     </div>
     <div class="columns">
-      <p class="thumbnail_align"> <a href="openAcct.html"><img src="../images/make-money.jpg" alt="" class="thumbnail"></a> </p>
+      <p class="thumbnail_align"> <a href="openAcct.html"><img src="./images/make-money.jpg" alt="" class="thumbnail"></a> </p>
       <h4>CHECKING</h4>
       <p>At LBTC, we have a simple purpose: to make the financial lives of our members easier and less expensive. Our checking account is no exception.</p>
     </div>
     <div class="columns">
-      <p class="thumbnail_align"> <a href="loans.html"><img src="../images/loans.jpg" alt="" class="thumbnail"></a> </p>
+      <p class="thumbnail_align"> <a href="loans.html"><img src="./images/loans.jpg" alt="" class="thumbnail"></a> </p>
       <h4>LOANS</h4>
       <p>Whether you're applying for a new loan or refinancing an existing one, it's nice to know that at Neighbors, our only goal is to get you to the best possible solution.</p>
     </div>
     <div class="columns">
-      <p class="thumbnail_align"> <a href="creditCards.html"><img src="../images/social-credit.jpg" alt="" class="thumbnail"></a> </p>
+      <p class="thumbnail_align"> <a href="creditCards.html"><img src="./images/social-credit.jpg" alt="" class="thumbnail"></a> </p>
       <h4>CREDIT CARDS</h4>
       <p>Visa® Credit Cards from LBTC offer great rates with no hidden fees. We’ve built a powerful combination that allows you to access the global strength of Visa and the personal attention of LBTC.</p>
     </div>
@@ -101,10 +101,10 @@
     </div>
   </div>
   <div class="social">
-    <p class="social_icon"><a href="contactUs.html"><img src="../images/contact-us-pad.jpg" width="398" alt="" class="thumbnail"></a></p>
-    <p class="social_icon"><a href="locations.html"><img src="../images/earth_location.png" width="256" alt="" class="thumbnail"></a></p>
-    <p class="social_icon"><a href="news.html"><img src="../images/news.jpg" width="781" alt="" class="thumbnail"></a></p>
-    <p class="social_icon"><a href="specials.html"><img src="../images/specials_circle.png" width="500" alt="" class="thumbnail"></a></p>
+    <p class="social_icon"><a href="contactUs.html"><img src="./images/contact-us-pad.jpg" width="398" alt="" class="thumbnail"></a></p>
+    <p class="social_icon"><a href="locations.html"><img src="./images/earth_location.png" width="256" alt="" class="thumbnail"></a></p>
+    <p class="social_icon"><a href="news.html"><img src="./images/news.jpg" width="781" alt="" class="thumbnail"></a></p>
+    <p class="social_icon"><a href="specials.html"><img src="./images/specials_circle.png" width="500" alt="" class="thumbnail"></a></p>
   </div>
   <footer class="secondary_header footer">
     <div class="copyright">&copy;2017-lb&amp;tc llc</div>

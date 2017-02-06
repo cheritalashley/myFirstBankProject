@@ -50,7 +50,9 @@ public class Address {
 		this.zip = zip;
 	}
 	
-	
-
+	public String toString(){
+		return this.address1 + "," + this.address2 + "," + this.city + "," +
+				this.state + "," + this.zip;
+	}
 }
 

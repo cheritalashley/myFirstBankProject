@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="com.Accounts.Accounts" %>
+<% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LashleyBankingAndTrustCompany</title>
+<title>Transaction Form from Checking Page</title>
 
 <link rel="stylesheet" type="text/css" href="./css/styles.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,9 +25,9 @@
     <nav class="secondary_header" id="menu">
       <ul>
       <!-- added block comment to not show all of menu 
-        <li><a href="./about.jsp">ABOUT</a></li> -->
-        <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>
-        <li><a href="./verifyAcct.jsp">EXISTING ACCOUNTS</a></li>
+        <li><a href="./about.jsp">ABOUT</a></li> 
+        <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>-->
+        <li>CHECKING ACCOUNT</li>
        <!--  <li><a href="./loans.jsp">LOANS</a></li>
         <li><a href="./creditCards.jsp">CREDIT CARDS</a></li>
         <li><a href="./contactUs.jsp">CONTACT</a></li> -->
@@ -35,16 +37,18 @@
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
-      <h3>checking account</h3>
-      <p><ul>
-	<li>No matter which checking account you choose, all include:</li>
-	<li>Free online banking,mobile banking and text alerts, smartphone &amp; tablet apps</a><sup>1</sup></li>
-	<li>Free Mobile Deposit that lets you deposit checks from anywhere via our apps<sup>1</sup></li>
-	<li>Free Purchase Rewards that give you cash back from participating retailers</li>
-	<li>Free FinanceWorks for budgeting and money management</li>
-	<li>Free Visa debit cards, direct deposit&amp; eStatements</li>
-	<li>Free access to 5,000 Shared Branches and 30,000 ATMs nationwide</li>
-</ul>
+      <h3>Transactions for the Month</h3>
+     <p><h3>HELLO, <%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h3>
+      <!-- <form class="container" action="BalanceServlet" method="post">
+ 		<div class="form-group">
+		<label for="balance">Checking Balance: </label> 
+		<input type="text" class="form-control" name ="Balance" id="Balance" placeholder="Balance" /> <br /><br />
+		<label for="transferAmountt">Transfer Amount: </label> 
+		<input type="text" class="form-control" name ="Transfer Amount" id="TransferAmount" placeholder="Transfer Amount" /> <br /><br />
+		<label for="Creditor">Creditor: </label> 
+		<input type="text" class="form-control" name ="Creditor" id="Creditor" placeholder="Creditor" /> <br /><br />
+  		<button type="submit" class="btn btn-default">Submit</button></div>
+</form> -->
 </p>
     </article>
     <p class="right_article"><img src="./images/logo.jpg" alt="" class="placeholder"/> </p>

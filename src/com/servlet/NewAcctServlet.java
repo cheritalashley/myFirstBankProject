@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.Accounts.Accounts;
 import com.Accounts.Address;
+import com.data.SavedData;
 
 /**
  * Servlet implementation class NewAcctServlet
@@ -51,18 +52,14 @@ public class NewAcctServlet extends HttpServlet {
 		
 		accounts.setAddress(address);
 		
+		SavedData newData=new SavedData();
+		newData.saveFile("C:\\Users\\lashl\\workspace\\myNewProject2\\src\\com\\data\\account.txt", accounts.toString());
+		
 		HttpSession session=request.getSession(true);
 		session.setAttribute("accounts", accounts);
 		
 		RequestDispatcher rs=request.getRequestDispatcher("openAcct.jsp");
 		rs.forward(request, response);
-		
-		
-		
-		
-		
-		
-		
 	}
 
 	/**

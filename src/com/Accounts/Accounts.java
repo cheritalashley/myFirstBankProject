@@ -59,5 +59,11 @@ public class Accounts {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
+	
+	public String toString(){
+		return this.firstName + "," + this.lastName + "," + this.phone + "," + this.password +
+				"," + this.email + "," + this.address.toString();
+	}
 
 }
+

@@ -20,7 +20,7 @@
 </head>
 
 <body><div class="container">
-  <header>
+<!--   <header> this is the login (save until i can read a file)
     <nav class="primary_header" id="login">
           <table class="table">
            <tr>
@@ -30,35 +30,33 @@
         </tr>
 	</table>
 	  </nav>
-	</header>
+	</header> -->
 	</div>
 
  <div class="container">
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./newAcct.html">NEW ACCOUNTS</a></li>
-        <li><a href="./openAcct.html">EXISTING ACCOUNTS (CHECKING/SAVINGS)</a></li>
-        <li><a href="./loans.html">LOANS</a></li>
-        <li><a href="./creditCards.html">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.html">CONTACT</a></li>
+        <li><a href="./depositForm.jsp">DEPOSIT</a></li>
+        <li><a href="./withdrawForm.jsp">WITHDRAWAL</a></li>
+        <li><a href="./viewForm.jsp">TRANSACTIONS</a></li>
+        <li><a href="./requestForm.jsp">REQUEST CHECKBOOK</a></li>
+        <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
       </ul>
     </nav>
   </header>
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
-      <h3>checking account</h3>
-      <p><ul>
-      <li><h1>HELLO</h1>
-    <li><h1><%  out.print(accounts.getFirstName() + "" + (accounts.getLastName()));  %></h1></li>
-	<li>Your account is Active</li>
-	<li>Click on an ACTION below</li>
-	</ul>
+    <h3>checking account</h3>
+    <p><h1>HELLO</h1>
+    <p><h1><%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h1></p>
+	<p><h4>Your account is Active</h4></p>
+	<p><h4>What would you like to do today?</h4></p>
+	
 		</p>
     </article>
-    <aside class="right_article"><img src="./images/logo.jpg" alt="" width="1040" height="400" class="placeholder"/> </aside>
+    <p class="right_article"><img src="./images/logo.jpg" alt="" width="1040" height="400" class="placeholder"/> </p>
   </section>
   <div class="row">
     <div class="columns">
