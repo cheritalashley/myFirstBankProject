@@ -22,13 +22,10 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-      <!-- added block comment to not show all of menu 
-        <li><a href="./about.jsp">ABOUT</a></li> -->
+
         <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>
         <li><a href="./verifyAcct.jsp">EXISTING ACCOUNTS</a></li>
-       <!--  <li><a href="./loans.jsp">LOANS</a></li>
-        <li><a href="./creditCards.jsp">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.jsp">CONTACT</a></li> -->
+
       </ul>
     </nav>
   </header>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,32 +24,28 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-      <!-- added block comment to not show all of menu 
-        <li><a href="./about.jsp">ABOUT</a></li> 
-        <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>-->
-        <li>CHECKING ACCOUNT</li>
-       <!--  <li><a href="./loans.jsp">LOANS</a></li>
-        <li><a href="./creditCards.jsp">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.jsp">CONTACT</a></li> -->
+      <li>DEPOSIT FORM</li>
+        <li><a href="./withdrawForm.jsp">WITHDRAWAL</a></li>
+        <li><a href="./transForm.jsp">TRANSACTIONS</a></li>
+        <li><a href="./requestForm.jsp">REQUEST CHECKBOOK</a></li>
+        <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
+         <li><a href="./index.jsp">LOG OUT</a></li>
       </ul>
     </nav>
   </header>
-  <section>
+   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
-      <h3>Deposit Information</h3>
-     <p> <h3>HELLO, <%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h3>
-      <form class="container" action="BalanceServlet" method="post">
+      <h2>CHECKING ACCOUNT - Deposit Information</h2>
+     	<h3>HELLO, <%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h3>
+    	<h4>You have decided to deposit into your account</h4>
+    	<h4>Your balance is $<%  out.print(accounts.getBalance());  %>${msg}</h4>     
+		<form class="container" action="DepositServlet" method="post">
  		<div class="form-group">
-		<label for="balance">Checking Balance: </label> 
-		<input type="text" class="form-control" name ="Balance" id="Balance" placeholder="Balance" /> <br /><br />
-		<label for="transferAmountt">Deposit Amount: </label> 
-		<input type="text" class="form-control" name ="Deposit Amount" id="DepositAmount" placeholder="Deposit Amount" /> <br /><br />
-		<label for="Creditor">Creditor: </label> 
-		<input type="text" class="form-control" name ="Creditor" id="Creditor" placeholder="Creditor" /> <br /><br />
+		<label for="deposit">Deposit Amount: </label> 
+		<input type="text" class="form-control" name ="Deposit" id="Deposit" placeholder="Deposit" /> <br /><br />
   		<button type="submit" class="btn btn-default">Submit</button></div>
-</form>
-</p>
+			</form>
     </article>
     <p class="right_article"><img src="./images/logo.jpg" alt="" class="placeholder"/> </p>
       </section>

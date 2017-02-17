@@ -1,6 +1,7 @@
 package com.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,19 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.Accounts.AccountBalance;
+import com.accounts.Accounts;
+import com.data.ReadData;
 
 /**
- * Servlet implementation class BalanceServlet
+ * Servlet implementation class WithdrawServlet
  */
-@WebServlet("/BalanceServlet")
-public class BalanceServlet extends HttpServlet {
+@WebServlet("/WithdrawServlet")
+public class WithdrawServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BalanceServlet() {
+    public WithdrawServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,23 +31,24 @@ public class BalanceServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		String balance=request.getParameter("balance");
-		String amount=request.getParameter("amount");
-		
-		double newBalance=((Integer.parseInt(balance))-(Integer.parseInt(amount)));
-		HttpSession session=request.getSession(true);
-		AccountBalance myBalance=(AccountBalance)session.getAttribute("balance");
-		myBalance.setBalance(newBalance);
-		
-		session.setAttribute("newBalance", newBalance);
-		RequestDispatcher rs=request.getRequestDispatcher("withdraw.jsp");
-		rs.forward(request, response);
-		
-	}
+				
+				HttpSession session=request.getSession(true);
+				Accounts user=(Accounts)session.getAttribute("accounts");
+				Double newBalance;
+				
+				Double balance=Double.parseDouble(user.getBalance());
+				String withdraw=request.getParameter("Withdraw");
+				newBalance=balance-(Double.parseDouble(withdraw));
+				user.setBalance(newBalance.toString());
+				session.setAttribute("accounts", user);
+				request.setAttribute("msg", " ---- UPDATED ------");
+				
+				RequestDispatcher rs=request.getRequestDispatcher("withdrawForm.jsp");
+				rs.forward(request,response);
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

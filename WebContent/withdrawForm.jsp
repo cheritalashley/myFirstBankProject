@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,31 +24,30 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-      <!-- added block comment to not show all of menu 
-        <li><a href="./about.jsp">ABOUT</a></li> 
-        <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>-->
-         <li>CHECKING ACCOUNT</li>
-       <!--  <li><a href="./loans.jsp">LOANS</a></li>
-        <li><a href="./creditCards.jsp">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.jsp">CONTACT</a></li> -->
+      	<li><a href="./depositForm.jsp">DEPOSIT</a></li>
+        <li>WITHDRAWAL FORM</li>
+        <li><a href="./transForm.jsp">TRANSACTIONS</a></li>
+        <li><a href="./requestForm.jsp">REQUEST CHECKBOOK</a></li>
+        <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
+         <li><a href="./index.jsp">LOG OUT</a></li>
       </ul>
     </nav>
   </header>
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
-      <h2>Transfer Information</h2>
-     <h3>HELLO, <%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h3>
-      <form class="container" action="BalanceServlet" method="post">
+      <h2>CHECKING ACCOUNT - Withdrawal/Transfer Information</h2>
+     	<h3>HELLO, <%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h3>
+    	<h4>You have decided to withdraw from your account</h4>
+    	<h4>Your balance is $<%  out.print(accounts.getBalance());  %>${msg}</h4>     
+		<form class="container" action="WithdrawServlet" method="post">
  		<div class="form-group">
-		<label for="balance">Checking Balance: </label> 
-		<input type="text" class="form-control" name ="Balance" id="Balance" placeholder="Balance" /> <br /><br />
-		<label for="transferAmountt">Transfer Amount: </label> 
-		<input type="text" class="form-control" name ="Transfer Amount" id="TransferAmount" placeholder="Transfer Amount" /> <br /><br />
-		<label for="Creditor">Creditor: </label> 
-		<input type="text" class="form-control" name ="Creditor" id="Creditor" placeholder="Creditor" /> <br /><br />
+		<label for="withdraw">Withdraw/Transfer Amount: </label> 
+		<input type="text" class="form-control" name ="Withdraw" id="Deposit" placeholder="Withdraw" /> <br /><br />
+		<label for="creditor">Creditor: </label> 
+		<input type="text" class="form-control" name ="Creditor" id="Deposit" placeholder="Creditor" /> 
   		<button type="submit" class="btn btn-default">Submit</button></div>
-</form>
+			</form>
 </p>
     </article>
     <p class="right_article"><img src="./images/logo.jpg" alt="" class="placeholder"/> </p>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,13 +24,12 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-      <!-- added block comment to not show all of menu 
-        <li><a href="./about.jsp">ABOUT</a></li> 
-        <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>-->
-        <li>CHECKING ACCOUNT</li>
-       <!--  <li><a href="./loans.jsp">LOANS</a></li>
-        <li><a href="./creditCards.jsp">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.jsp">CONTACT</a></li> -->
+       <li><a href="./depositForm.jsp">DEPOSIT</a></li>
+        <li><a href="./withdrawForm.jsp">WITHDRAWAL</a></li>
+        <li><a href="./transForm.jsp">TRANSACTIONS</a></li>
+        <li>REQUEST CHECKBOOK</li>
+        <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
+         <li><a href="./index.jsp">LOG OUT</a></li>
       </ul>
     </nav>
   </header>

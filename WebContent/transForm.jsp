@@ -1,15 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
-<% AccountBalance myBalance=(AccountBalance) session.getAttribute("balance"); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Withdraw Page</title>
+<title>Withdraw Form from Checking Page</title>
 
 <link rel="stylesheet" type="text/css" href="./css/styles.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,31 +24,33 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-      <!-- added block comment to not show all of menu 
-        <li><a href="./about.jsp">ABOUT</a></li> 
-        <li><a href="./newAcct.jsp">NEW ACCOUNTS</a></li>-->
-        <li>CHECKING ACCOUNT</li>
-       <!--  <li><a href="./loans.jsp">LOANS</a></li>
-        <li><a href="./creditCards.jsp">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.jsp">CONTACT</a></li> -->
+      	<li><a href="./depositForm.jsp">DEPOSIT</a></li>
+        <li><a href="./withdrawForm.jsp">WITHDRAWAL FORM </a></li>
+        <li>TRANSACTION REPORT</li>
+        <li><a href="./requestForm.jsp">REQUEST CHECKBOOK</a></li>
+        <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
+         <li><a href="./index.jsp">LOG OUT</a></li>
       </ul>
     </nav>
   </header>
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
-      <h3>Transfer Information</h3>
-     <p>
-      <form class="container" action="BalanceServlet" method="post">
- 		<div class="form-group">
-		<label for="balance">Checking Balance: </label> 
-		<input type="text" class="form-control" name ="Balance" id="Balance" placeholder="Balance" /> <br /><br />
-		<label for="transferAmountt">Transfer Amount: </label> 
-		<input type="text" class="form-control" name ="Transfer Amount" id="TransferAmount" placeholder="Transfer Amount" /> <br /><br />
-		<label for="Creditor">Creditor: </label> 
-		<input type="text" class="form-control" name ="Creditor" id="Creditor" placeholder="Creditor" /> <br /><br />
-  		<button type="submit" class="btn btn-default">Submit</button></div>
-</form>
+      <h2>TRANSACTION REPORT</h2>
+     	<table bgcolor="#000000" border="5" width="70%">
+     	<tr>
+     		<td align="center"><h3>HELLO, <%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h3></td>
+    	</tr>
+    	<tr>
+    	<td><h4>Description</h4></td>
+    	 </tr>
+    	 <td> <%  out.print(accounts.getBalance());  %>  </td></tr>  
+			
+		</table>	
+		<form class="container" action="TranListServlet" method="post">
+		<p>Click Submit to See Transaction Report</p>
+		<button type="submit" class="btn btn-default">Submit</button></div>
+		</form>
 </p>
     </article>
     <p class="right_article"><img src="./images/logo.jpg" alt="" class="placeholder"/> </p>

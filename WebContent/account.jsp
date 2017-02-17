@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%-- <%@ page import="com.student.Student" %> --%>
 <%-- <% Student student=(Student) session.getAttribute("student");%> --%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts customer=(Accounts) session.getAttribute("customer");%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

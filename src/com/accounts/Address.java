@@ -1,11 +1,20 @@
-package com.Accounts;
+package com.accounts;
 
 public class Address {
 	private String address1;
 	private String address2;
 	private String city;
 	private String state;
-	private String zip;
+	private String zipCode;
+	private String country;
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
 	public Address(){
 	}
@@ -42,17 +51,16 @@ public class Address {
 		this.state = state;
 	}
 
-	public String getZip() {
-		return zip;
+	public String getZipCode() {
+		return zipCode;
 	}
 
-	public void setZip(String zip) {
-		this.zip = zip;
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 	
 	public String toString(){
-		return this.address1 + "," + this.address2 + "," + this.city + "," +
-				this.state + "," + this.zip;
+		return this.address1 + "," + this.address2 + "," + this.city + "," + this.state + "," + this.zipCode + "," + this.country;
 	}
 }
 

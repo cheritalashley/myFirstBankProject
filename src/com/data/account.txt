@@ -1,1 +1,1 @@
-Bryan,Lashley,,12345678,lashley@gmail.com,9556 Olive,Apt 76,Olivette,Missouri,null,,,,,,,,,null,,,,,,,,,null
+Bryan,Lashley,8761234567,9556 Olive,Apt 2,Olivette,Missouri,96534,United States,lashleynook@gmail.com,23456781,100

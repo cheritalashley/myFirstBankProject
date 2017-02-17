@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="com.accounts.Accounts" %>
+<% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,43 +20,34 @@
 </head>
 
 <body>
-<div class="container">
-  <header>
-    <nav class="primary_header" id="login">
-	<form action="src/com/servlet/BankServlet.java" method="post">
-          <table class="table">
-           <tr>
-            <th><input type="text" placeholder="Email" name="Email" id="Email" class="form-control"></th>
-            <th><input type="password" placeholder="Password" name="Password" id="Password" class="form-control"></th>
-			<th><button type="submit" name="Submit" id="Submit" class="btn btn-success">Sign in</button></th>
-        </tr>
-	</table>
-	</form>
-	  </nav>
-	</header>
-	</div>
-
  <div class="container">
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./newAcct.html">NEW ACCOUNTS</a></li>
-        <li><a href="./openAcct.html">EXISTING ACCOUNTS (CHECKING/SAVINGS)</a></li>
-        <li><a href="./loans.html">LOANS</a></li>
-        <li><a href="./creditCards.html">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.html">CONTACT</a></li>
+        <li><a href="./depositForm.jsp">DEPOSIT</a></li>
+        <li><a href="./withdrawForm.jsp">WITHDRAWAL</a></li>
+        <li><a href="./transForm.jsp">TRANSACTIONS</a></li>
+        <li><a href="./requestForm.jsp">REQUEST CHECKBOOK</a></li>
+        <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
+        <li><a href="./index.jsp">LOG OUT</a></li>
       </ul>
     </nav>
   </header>
   <section>
     <h2 class="noDisplay">Main Content</h2>
     <article class="left_article">
-      <h3>checking account</h3>
-      <p><ul>
-	<li>Login to Existing Checking Account using the link Above</li>
-	</ul>
-</p>
+      
+       <h3>Login to Existing Checking Account </h3>
+		<form onsubmit="return validate()" action="LogInServlet" method="post">
+		          <table class="table">
+		           <tr>
+		            <th><input type="text" placeholder="Email" name="Email" id="Email" class="form-control"></th>
+		            <th><input type="password" placeholder="Password" name="Password" id="Password" class="form-control"></th>
+					<th><button type="submit" name="Submit" id="Submit" class="btn btn-success">Sign in</button></th>
+		        </tr>
+			</table>
+			</form>
+			${msg3}
     </article>
     <aside class="right_article"><img src="./images/logo.jpg" alt="" width="1040" height="400" class="placeholder"/> </aside>
   </section>
@@ -98,6 +91,21 @@
     <div class="copyright">&copy;2017-lb&amp;tc llc</div>
   </footer>
 </div>
+	<script type="text/javascript">
+		function validate() {				
+			
+		    // checking to make sure values are not blank
+		    var em = document.getElementById("Email");
+		    var pw = document.getElementById("Password");
+		    
+		    if (em.value !="" && pw.value !=""){
+		    	return true;
+		    }
+		    
+		   	alert("Enter values for email and password");
+		   	return false;
+		 }
+	</script>
 </body>
 </html>
 

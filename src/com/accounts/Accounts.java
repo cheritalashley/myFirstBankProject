@@ -1,17 +1,26 @@
-package com.Accounts;
+package com.accounts;
 
 public class Accounts {
 
 	private String firstName;
 	private String lastName;
 	private String phone;
-	protected String email;
-	protected String password;
 	private Address address;
+	private String email;
+	private String password;
+	private String balance="100";
 		
 	public Accounts(){
 	}
+	
+	public String getBalance() {
+		return balance;
+	}
 
+	public void setBalance(String balance) {
+		this.balance = balance;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -61,8 +70,7 @@ public class Accounts {
 	}
 	
 	public String toString(){
-		return this.firstName + "," + this.lastName + "," + this.phone + "," + this.password +
-				"," + this.email + "," + this.address.toString();
+		return this.firstName + "," + this.lastName + "," + this.phone + "," + this.address.toString() + "," + this.email + "," + this.password + "," + this.balance;
 	}
 
 }

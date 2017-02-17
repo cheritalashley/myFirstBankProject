@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,12 +24,9 @@
   <header>
     <nav class="secondary_header" id="menu">
       <ul>
-       <!--  <li><a href="./about.html">ABOUT</a></li> -->
+      
         <li>NEW ACCOUNTS</li>
-        <!-- <li><a href="./openAcct.html">EXISTING ACCOUNTS (CHECKING/SAVINGS)</a></li>
-        <li><a href="./loans.html">LOANS</a></li>
-        <li><a href="./creditCards.html">CREDIT CARDS</a></li>
-        <li><a href="./contactUs.html">CONTACT</a></li> -->
+        
       </ul>
     </nav>
   </header>

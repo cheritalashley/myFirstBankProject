@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.Accounts.Accounts" %>
+<%@ page import="com.accounts.Accounts" %>
 <% Accounts accounts=(Accounts) session.getAttribute("accounts");%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,7 +10,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Open Account</title>
-
 <link rel="stylesheet" type="text/css" href="./css/styles.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,9 +39,10 @@
       <ul>
         <li><a href="./depositForm.jsp">DEPOSIT</a></li>
         <li><a href="./withdrawForm.jsp">WITHDRAWAL</a></li>
-        <li><a href="./viewForm.jsp">TRANSACTIONS</a></li>
+        <li><a href="./transForm.jsp">TRANSACTIONS</a></li>
         <li><a href="./requestForm.jsp">REQUEST CHECKBOOK</a></li>
         <li><a href="./closeForm.jsp">CLOSE ACCOUNT</a></li>
+         <li><a href="./index.jsp">LOG OUT</a></li>
       </ul>
     </nav>
   </header>
@@ -52,9 +53,7 @@
     <p><h1>HELLO</h1>
     <p><h1><%  out.print(accounts.getFirstName() + " " + (accounts.getLastName()));  %></h1></p>
 	<p><h4>Your account is Active</h4></p>
-	<p><h4>What would you like to do today?</h4></p>
-	
-		</p>
+	<p><h4>Choose Option</h4></p>
     </article>
     <p class="right_article"><img src="./images/logo.jpg" alt="" width="1040" height="400" class="placeholder"/> </p>
   </section>
@@ -98,6 +97,7 @@
     <div class="copyright">&copy;2017-lb&amp;tc llc</div>
   </footer>
 </div>
+
 </body>
 </html>
 
